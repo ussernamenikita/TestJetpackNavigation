@@ -8,22 +8,13 @@
         android:name="com.example.navigationtest.LoginFragment">
         <action
             android:id="@+id/action_login_to_main_flow"
-            app:destination="@id/mainFlowFragment" />
-
+            app:destination="@id/mainFlowFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="false"/>
     </fragment>
+
     <fragment
         android:id="@+id/mainFlowFragment"
-        android:name="com.example.navigationtest.MainFlowFragment" >
-        <action android:id="@+id/action_main_flow_to_rates"
-            app:destination="@+id/ratesFragment"
-            app:popUpTo="@id/mainFlowFragment"
-            app:popUpToInclusive="false"
-            />
-    </fragment>
-
-    <fragment
-        android:id="@+id/ratesFragment"
-        android:name="com.example.navigationtest.RatesFragment">
-    </fragment>
+        android:name="com.example.navigationtest.MainFlowFragment" />
 
 </navigation>

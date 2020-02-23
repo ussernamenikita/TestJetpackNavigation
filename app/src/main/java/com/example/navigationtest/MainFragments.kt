@@ -16,13 +16,13 @@ class LoginFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.login_fragment_layout, container,false)
+        return inflater.inflate(R.layout.login_fragment_layout, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         toMainFlowBtn.setOnClickListener {
-            (activity as MainActivity).navigate(MainNavigation.MainFlow)
+            (activity as MainActivity).navigateToMainFlow()
         }
     }
 }
@@ -34,17 +34,7 @@ class MainFlowFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.main_flow_layout, container,false)
-    }
-}
-
-class RatesFragment : Fragment() {
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.rate_fragment, container,false)
+        return inflater.inflate(R.layout.main_flow_layout, container, false)
     }
 }
 
